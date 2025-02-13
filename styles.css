@@ -1,0 +1,128 @@
+/* กำหนดพื้นฐาน */
+body {
+    font-family: "Mali", serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาที่ Header */
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background: #003d80;
+    border-radius: 5px;
+}
+
+/* การตกแต่งเนื้อหา */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* การตกแต่งกรอบแต่ละประวัติ */
+.work-experience {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px; /* เว้นระยะระหว่างกล่อง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.work-experience h3 {
+    margin: 0;
+    color: #007BFF;
+}
+
+.work-experience p {
+    margin: 8px 0;
+}
+
+.work-experience p strong {
+    color: #333;
+}
+
+/* เพิ่ม Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+.qr-section {
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-top: 20px;
+}
+
+.qr-section strong {
+    display: block; /* ทำให้ข้อความเป็นบล็อก */
+    margin-bottom: 10px; /* ระยะห่างจากรูป */
+    font-size: 18px; /* ขนาดตัวอักษร */
+}
+
+.qr-image {
+    max-width: 300px; /* กำหนดขนาดสูงสุดของภาพ */
+    width: 100%; /* ยืดภาพให้เต็มตามขนาดที่กำหนด */
+    height: auto; /* รักษาสัดส่วนภาพ */
+    border-radius: 8px; /* มุมโค้ง */
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  #toast {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* แสดง Popup */
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="work.html">ประวัติการทำงาน</a></li>
+                <li><a href="skills.html">ทักษะและเครื่องมือ</a></li>
+                <li><a href="contact.html">ข้อมูลติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>สามารถติดต่อได้ทาง</h2>
+    
+        <!-- ข้อความที่จะคัดลอก -->
+        <p><strong>Gmail :</strong>
+            <span style="cursor: pointer;" onclick="copyText('Krittaporn.03work@gmail.com')">
+                Krittaporn.03work@gmail.com
+            </span>
+        </p>
+        
+        <p><strong>Line :</strong> 
+            <span style="cursor: pointer;" onclick="copyText('menmen@3258')">
+                menmen@3258
+            </span>
+        </p>
+    
+        <p><strong>เบอร์โทร :</strong> 
+            <span style="cursor: pointer;" onclick="copyText('0851538975')">
+                085-153-8975
+            </span>
+        </p>
+    
+        <!-- QR Code Section -->
+        <div class="qr-section">
+            <strong>Qr Code Line</strong>
+            <img src="QrLinePic.jpeg" alt="QR Code" class="qr-image">
+        </div>
+    </main>
+    
+    <div id="toast">คัดลอกแล้ว!</div>
+    
+    <script>
+        function copyText(copyData) {
+            navigator.clipboard.writeText(copyData).then(() => {
+                showToast(); // แสดง Popup แจ้งเตือน
+            }).catch(err => {
+                console.error("เกิดข้อผิดพลาดในการคัดลอก: ", err);
+            });
+        }
+    
+        function showToast() {
+            let toast = document.getElementById("toast");
+            toast.classList.add("show");
+    
+            // ซ่อน popup หลังจาก 2 วินาที
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2000);
+        }
+    </script>
+    

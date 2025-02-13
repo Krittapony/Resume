@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* เพิ่มการตกแต่งเฉพาะส่วน check ✔️ */
+        .checklist p:before {
+            content: '✔️ ';
+            color: #28a745;
+        }
+
+        /* จัดแบ่งรายการเป็น 2 คอลัมน์ */
+        .checklist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* ระยะห่างระหว่างรายการ */
+        }
+
+        .checklist div {
+            flex: 1 1 45%; /* คอลัมน์กว้าง 45% */
+            min-width: 200px; /* ความกว้างขั้นต่ำ */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="work.html">ประวัติการทำงาน</a></li>
+                <li><a href="skills.html">ทักษะและเครื่องมือ</a></li>
+                <li><a href="contact.html">ข้อมูลติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Tools</h2>
+        <div class="checklist">
+            <div>
+                <p>Jira Software</p>
+                <p>API PostMan</p>
+                <p>Excel</p>
+            </div>
+        </div>
+        <h2>Skill for software tester</h2>
+        <div class="checklist">
+            <div>
+                <p>Execute Testcase</p>
+                <p>Manual Test</p>
+                <p>Create test scenario</p>
+                <p>Create test script</p>
+                <p>Create test case</p>
+            </div>
+            <div>
+                <p>Log defect</p>
+                <p>Training User</p>
+                <p>Support User</p>
+                <p>Support production</p>
+            </div>
+        </div>
+        <h2>Test phase experience</h2>
+        <div class="checklist">
+            <div>
+                <p>UAT</p>
+                <p>Regression</p>
+            </div>
+            <div>
+                <p>End to End</p>
+                <p>Functional test</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
