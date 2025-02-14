@@ -15,32 +15,6 @@ header {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาที่ Header */
 }
-
-.navbar {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #0056b3;
-    margin: 0;
-}
-
-.navbar li {
-    margin: 0 10px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    display: inline-block;
-}
-
-.navbar a:hover {
-    background: #003d80;
-    border-radius: 5px;
-}
-
 /* การตกแต่งเนื้อหา */
 main {
     padding: 20px;
@@ -133,34 +107,26 @@ footer {
  .navbar {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #007BFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #0056b3;
+    margin: 0;
 }
 
 .navbar li {
-    margin: 0 20px;
-    padding: 10px 15px;
+    margin: 0 10px;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
+    padding: 10px 15px;
     display: inline-block;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #004080;
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: #003d80;
+    border-radius: 5px;
 }
 
 /* การตกแต่งเนื้อหา */
@@ -190,11 +156,15 @@ footer {
 /* จัดการให้ navbar รองรับมือถือ */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;  /* จัดเรียงให้เป็นแถว */
+        justify-content: space-between; /* เพิ่มระยะห่างระหว่างเมนู */
+    }
+    
+    .navbar li {
+        margin: 0 5px; /* ลดระยะห่างในมือถือ */
     }
 
-    .navbar li {
-        margin: 10px 0;
+    .navbar a {
+        padding: 8px 12px; /* ลดขนาด padding */
     }
 }
